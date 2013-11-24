@@ -34,6 +34,7 @@
 		113D4CE3184000800051122B /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		113D4CE51840DF7A0051122B /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../config.h; sourceTree = "<group>"; };
 		113D4CE61840E8600051122B /* HidUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HidUtils.h; sourceTree = "<group>"; };
+		113D4CE71842AE330051122B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		113F64D6183E93B20041DE1B /* HidSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HidSample; sourceTree = BUILT_PRODUCTS_DIR; };
 		113F64D9183E93B20041DE1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		113F64DC183E93B20041DE1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		113F64D8183E93B20041DE1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				113D4CE71842AE330051122B /* Cocoa.framework */,
 				113D4CE3184000800051122B /* ApplicationServices.framework */,
 				113D4CE1183FFFC60051122B /* IOKit.framework */,
 				113D4CDF183FFFC30051122B /* CoreFoundation.framework */,
@@ -236,6 +238,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HidSample/HidSample-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
 			};
 			name = Debug;
 		};
@@ -244,7 +247,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HidSample/HidSample-Prefix.pch";
+				"INFOPLIST_FILE[sdk=macosx10.8]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
 			};
 			name = Release;
 		};

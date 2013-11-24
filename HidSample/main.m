@@ -14,7 +14,6 @@
 //---------------------------------------------------------------------------
 static IONotificationPortRef	gNotifyPort = NULL;
 static io_iterator_t		gAddedIter = 0;
-
 static NSLock *gLock = 0;
 
 //---------------------------------------------------------------------------
@@ -188,14 +187,9 @@ static void QueueCallbackFunction(
                                   void * 			sender);
 
 int main (int argc, const char * argv[]) {
-    // insert code here...
-    
-    if (argc == 1)
-    {
-        gLock = [[NSLock alloc] init];
-        InitHIDNotifications();
-        CFRunLoopRun();
-    }
+    gLock = [[NSLock alloc] init];
+    InitHIDNotifications(TOUCH_VID, TOUCH_PID);
+    CFRunLoopRun();
     
     return 0;
 }
@@ -208,13 +202,11 @@ int main (int argc, const char * argv[]) {
 // and calls the routine that will alert us when a HID Device is plugged in.
 //---------------------------------------------------------------------------
 
-static void InitHIDNotifications()
+static void InitHIDNotifications(SInt32 vendorID, SInt32 productID)
 {
     CFMutableDictionaryRef 	matchingDict;
     CFNumberRef                 refProdID;
     CFNumberRef                 refVendorID;
-    SInt32                      productID = TOUCH_PID;
-    SInt32                      vendorID = TOUCH_VID;
     mach_port_t 		masterPort;
     kern_return_t		kr;
     
