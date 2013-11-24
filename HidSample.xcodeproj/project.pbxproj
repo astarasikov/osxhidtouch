@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113D4CE0183FFFC30051122B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113D4CDF183FFFC30051122B /* CoreFoundation.framework */; };
+		113D4CE2183FFFC60051122B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113D4CE1183FFFC60051122B /* IOKit.framework */; };
+		113D4CE4184000800051122B /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113D4CE3184000800051122B /* ApplicationServices.framework */; };
 		113F64DA183E93B20041DE1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113F64D9183E93B20041DE1B /* Foundation.framework */; };
 		113F64DD183E93B20041DE1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F64DC183E93B20041DE1B /* main.m */; };
 		113F64E1183E93B20041DE1B /* HidSample.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 113F64E0183E93B20041DE1B /* HidSample.1 */; };
@@ -26,6 +29,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		113D4CDF183FFFC30051122B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		113D4CE1183FFFC60051122B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		113D4CE3184000800051122B /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		113D4CE51840DF7A0051122B /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../config.h; sourceTree = "<group>"; };
+		113D4CE61840E8600051122B /* HidUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HidUtils.h; sourceTree = "<group>"; };
 		113F64D6183E93B20041DE1B /* HidSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HidSample; sourceTree = BUILT_PRODUCTS_DIR; };
 		113F64D9183E93B20041DE1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		113F64DC183E93B20041DE1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,6 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113D4CE4184000800051122B /* ApplicationServices.framework in Frameworks */,
+				113D4CE2183FFFC60051122B /* IOKit.framework in Frameworks */,
+				113D4CE0183FFFC30051122B /* CoreFoundation.framework in Frameworks */,
 				113F64DA183E93B20041DE1B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +76,9 @@
 		113F64D8183E93B20041DE1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				113D4CE3184000800051122B /* ApplicationServices.framework */,
+				113D4CE1183FFFC60051122B /* IOKit.framework */,
+				113D4CDF183FFFC30051122B /* CoreFoundation.framework */,
 				113F64D9183E93B20041DE1B /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -73,6 +87,8 @@
 		113F64DB183E93B20041DE1B /* HidSample */ = {
 			isa = PBXGroup;
 			children = (
+				113D4CE51840DF7A0051122B /* config.h */,
+				113D4CE61840E8600051122B /* HidUtils.h */,
 				113F64DC183E93B20041DE1B /* main.m */,
 				113F64E0183E93B20041DE1B /* HidSample.1 */,
 				113F64DE183E93B20041DE1B /* Supporting Files */,
@@ -251,6 +267,7 @@
 				113F64E6183E93B20041DE1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
